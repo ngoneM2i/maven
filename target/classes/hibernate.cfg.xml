@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mytube?serverTimezone=UTC</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">rootroot</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property> 
+
+		<!-- database pooling information -->
+		<property name="connection_provider_class">
+			org.hibernate.connection.C3P0ConnectionProvider
+		</property>
+
+		<!-- mapping 
+		<mapping class="hibernate.Customer" />
+		<mapping class="hibernate.Address" />
+		<mapping class="hibernate.City" />
+		<mapping class="hibernate.Country" />-->
+		<mapping class="com.maven.mytube.Comment" />
+		<mapping class="com.maven.mytube.User" />
+		<mapping class="com.maven.mytube.Video" />
+		<mapping class="com.maven.mytube.VideoRepository" />		
+	</session-factory>
+</hibernate-configuration>

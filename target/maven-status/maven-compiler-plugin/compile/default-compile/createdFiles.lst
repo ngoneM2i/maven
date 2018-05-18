@@ -1,0 +1,6 @@
+com\maven\mytube\HibernateUtils.class
+com\maven\mytube\User.class
+com\maven\mytube\Video.class
+com\maven\mytube\Comment.class
+com\maven\mytube\VideoRepository.class
+com\maven\mytube\VideoServelet.class
